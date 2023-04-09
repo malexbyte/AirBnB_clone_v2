@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ Function that compress a folder """
 from datetime import datetime
-from fabric.api import *
+from fabric.api import put, run, env
 import shlex
 import os
 
 
-env.hosts = ['35.231.33.237', '34.74.155.163']
+env.hosts = ['54.237.104.101', '100.25.16.145']
 env.user = "ubuntu"
 
 
