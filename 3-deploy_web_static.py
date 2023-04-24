@@ -27,6 +27,8 @@ def do_pack():
 
 
 def do_deploy(archive_path):
+    env.user = 'ubuntu'
+    env.key_filename = '~/.ssh/id_rsa'
     """distributes an archive to the web servers"""
     if exists(archive_path) is False:
         return False
@@ -48,6 +50,8 @@ def do_deploy(archive_path):
 
 
 def deploy():
+    env.user = 'ubuntu'
+    env.key_filename = '~/.ssh/id_rsa'
     """creates and distributes an archive to the web servers"""
     archive_path = do_pack()
     if archive_path is None:
